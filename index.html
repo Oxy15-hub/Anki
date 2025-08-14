@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lancer Anki (macOS)</title>
+  <meta name="description" content="Ouvre Anki via un raccourci macOS">
+  <meta property="og:title" content="Lancer Anki (macOS)">
+  <meta property="og:description" content="Clique pour ouvrir Anki via l'app Raccourcis">
+  <style>
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:#0b0b0b;color:#fff}
+    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:2rem}
+    .card{max-width:640px;width:100%;background:#111;border:1px solid #222;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.35);padding:28px;text-align:center}
+    h1{font-size:1.7rem;margin:0 0 .6rem}
+    p{opacity:.9;line-height:1.55}
+    .btn{display:inline-block;margin-top:14px;padding:12px 18px;border-radius:12px;border:1px solid #2a2a2a;text-decoration:none;font-weight:700;background:#1a1a1a;color:#fff}
+    .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:10px}
+    .small{font-size:.85rem;opacity:.75;margin-top:10px}
+    code{background:#1b1b1b;padding:.1rem .35rem;border-radius:6px}
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      function openShortcut() {
+        window.location.href = "shortcuts://run-shortcut?name=Anki";
+      }
+      setTimeout(openShortcut, 600);
+      setTimeout(function () {
+        var el = document.getElementById('fallback');
+        if (el && !document.hidden) {
+          el.style.display = 'block';
+        }
+      }, 1800);
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Lancer Anki</h1>
+      <p>Cette page lance Anki via l'app <strong>Raccourcis</strong> sur macOS. Si rien ne se passe, clique sur le bouton ci-dessous.</p>
+      <div class="row">
+        <a class="btn" href="shortcuts://run-shortcut?name=Anki" rel="noopener">Lancer via Raccourcis</a>
+        <a class="btn" href="https://www.icloud.com/shortcuts/2ea5c090ceb64258af4826a8c2d9fe73" rel="noopener">Installer le raccourci (iCloud)</a>
+      </div>
+      <div id="fallback" style="display:none" class="small">
+        <p>Astuce : installe le raccourci nommé <code>Anki</code> puis réessaie.</p>
+        <p>URL utilisée : <code>shortcuts://run-shortcut?name=Anki</code></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
